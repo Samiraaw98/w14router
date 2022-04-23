@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import SearchView from '@/views/SearchView.vue'
+import ProfileView from '@/views/ProfileView.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +11,16 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path : '/search/:query?',
+    name : 'search',
+    component : SearchView
+  },
+  {
+    path : '/profile/:name?',
+    name : 'profile',
+    component : ProfileView
   },
   {
     path: '/about',
